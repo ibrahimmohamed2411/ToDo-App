@@ -12,7 +12,10 @@ class DoneScreen extends StatelessWidget {
           child: Dismissible(
             onDismissed: (dismissible) {
               Data.deleteFromDatabase(
-                  Data.doneTasks[index].id!, index, 'doneTasks');
+                Data.doneTasks[index].id!,
+                index,
+                'doneTasks',
+              );
             },
             key: ValueKey(Data.doneTasks[index].id),
             child: ListTile(
